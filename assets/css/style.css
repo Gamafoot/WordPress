@@ -1,0 +1,257 @@
+body{
+    background-color: #DFDFDF;;
+}
+
+h1,h2,h3,h4,h5,a,p{
+    margin: 0;
+}
+
+a{
+    color: #454545;
+    text-decoration: none;
+    font-family: Century Gothic;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex: 5;
+}
+
+.row .col{
+    display: flex;
+    flex-direction: column;
+}
+
+.col .menu{
+    min-width: 300px;
+    min-height: 81px;
+    margin-bottom: 7%;
+    background: #FFFFFF;
+    border-radius: 31px;
+}
+
+.col:nth-child(2){
+    width: 60%;
+}
+
+.menu .menu__navigation{
+    margin: 15% 0;
+    width: 244px;
+    height: 62px;
+    border-radius: 0 50px 50px 0;
+    
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.active{
+    background: #DFDFDF;
+}
+
+.block-user-info{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 4% 2%;
+}
+
+
+.block-user-info .avatar{
+    margin: 0 2%;
+}
+
+.block-user-info .avatar img{
+    width: 88px;
+    height: 88px;
+}
+
+.block-user-info .main-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.block-user-info .main-info h5{
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+}
+
+.main-info p{
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    color: #A8A8A8;
+}
+
+.block-user-info .some-info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.block-user-info .side{
+    display: flex;
+    flex:1;
+}
+
+.side:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side h1{
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #454545;
+}
+
+.menu .block-quality{
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+}
+
+.block-quality .characteristics{
+    flex:1;
+}
+
+.characteristics img{
+    float: right;
+}
+
+.block-quality .character{
+    flex:1;
+}
+
+.character .character__title p{
+    font-family: Century Gothic;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.character .character__image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.block-statistics {
+    display: flex;
+    flex-direction: row;
+    margin: 30px;
+}
+
+.block-statistics .schedule{
+    flex:1;
+}
+
+.block-statistics .study-process{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.block-statistics .study-process h1{
+    font-family: Century Gothic;
+    font-size: 31px;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.block-statistics .line{
+    width: 70%;
+    height: 15px;
+    background-color: #454545;
+    margin-top: 50px;
+    border-radius: 50px;
+}
+
+.menu-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu-row .menu{
+    width: 45%;
+}
+
+.title{
+    text-align: center;
+    font-family: Century Gothic;
+    font-size: 31px;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0em;
+    margin: 20px;
+}
+
+.menu .services{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 40px;
+}
+
+.materials{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.materials__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icons__item{
+    cursor: pointer;
+}
+
+.calendar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.calendar img{
+    height: 208px;
+}
