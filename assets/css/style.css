@@ -4,6 +4,7 @@ body{
 
 h1,h2,h3,h4,h5,a,p{
     margin: 0;
+    color: black;
 }
 
 a{
@@ -20,7 +21,7 @@ a{
 .content{
     width: 100%;
     height: 100%;
-    margin-top: 5%;
+    padding-top: 30px;
 }
 
 .row{
@@ -33,14 +34,20 @@ a{
 .row .col{
     display: flex;
     flex-direction: column;
+    width: 15%;
 }
 
 .col .menu{
-    min-width: 300px;
+    width: 100%;
     min-height: 81px;
     margin-bottom: 7%;
     background: #FFFFFF;
     border-radius: 31px;
+}
+
+.col:nth-child(3) .menu:nth-child(1){
+    display: flex;
+    justify-content: center;
 }
 
 .col:nth-child(2){
@@ -49,13 +56,34 @@ a{
 
 .menu .menu__navigation{
     margin: 15% 0;
-    width: 244px;
+    width: 80%;
     height: 62px;
     border-radius: 0 50px 50px 0;
     
     display: flex;
     align-items: center;
     padding-left: 5%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.menu__navigation a{
+    z-index: 2;
+}
+
+.menu__navigation::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #DFDFDF;
+    left: -100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu__navigation:hover::before{
+    left: 0;
 }
 
 .active{
@@ -66,7 +94,14 @@ a{
     width: 100%;
     display: flex;
     flex-direction: row;
-    margin: 4% 2%;
+}
+
+.block-user-info .side:nth-child(1){
+    margin: 4% 0 4% 2%;
+}
+
+.block-user-info .side:nth-child(2){
+    margin: 4% 2% 4% 0;
 }
 
 
@@ -130,20 +165,11 @@ a{
 
 .menu .block-quality{
     display: flex;
-    flex-direction: row;
     margin: 50px;
 }
 
-.block-quality .characteristics{
-    flex:1;
-}
-
 .characteristics img{
-    float: right;
-}
-
-.block-quality .character{
-    flex:1;
+    max-width: 80%;
 }
 
 .character .character__title p{
@@ -162,6 +188,10 @@ a{
     justify-content: center;
 }
 
+.character__image img{
+    max-width: 100%;
+}
+
 .block-statistics {
     display: flex;
     flex-direction: row;
@@ -170,6 +200,10 @@ a{
 
 .block-statistics .schedule{
     flex:1;
+}
+
+.schedule img{
+    max-width: 100%;
 }
 
 .block-statistics .study-process{
@@ -206,6 +240,13 @@ a{
     width: 45%;
 }
 
+.services-menu{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 0;
+}
+
 .title{
     text-align: center;
     font-family: Century Gothic;
@@ -213,26 +254,50 @@ a{
     font-weight: 700;
     line-height: 39px;
     letter-spacing: 0em;
-    margin: 20px;
+    margin-bottom: 20px;
 }
 
 .menu .services{
     display: flex;
     justify-content: space-around;
-    padding-bottom: 40px;
+    width: 80%;
 }
 
-.materials{
+.services .services__item{
+    display: flex;
+    justify-content: center;
+
+}
+
+.materials__elements{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.materials__wrapper{
+.materials__menu{
+    padding: 30px 0;
+}
+
+.materials__row{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     width: 80%;
+}
+
+.materials__col{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.materials__col .materials__item{
+    display: flex;
+    justify-content: center;
+}
+
+.materials__col .materials__item img{
+    max-width: 80%;
 }
 
 .icons{
@@ -243,15 +308,76 @@ a{
 
 .icons__item{
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.icons__item img{
+    max-width: 80%;
 }
 
 .calendar{
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     margin-top: 10px;
 }
 
 .calendar img{
-    height: 208px;
+    max-width: 80%;
+}
+
+@media screen and (max-width: 1500px) {
+    .side h1{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .menu__navigation a{
+        font-size: 16px;
+    }
+
+    .block-user-info .main-info h5{
+        font-size: 16px;
+    }
+
+    .main-info p{
+        font-size: 12px;
+    }
+
+    .side h1{
+        font-size: 22px;
+    }
+
+    .character .character__title p{
+        font-size: 18px;
+    }
+
+    .block-statistics .study-process h1{
+        font-size: 25px;
+    }
+
+    .block-statistics .line{
+        margin-top: 30px;
+        height: 10px;
+    }
+
+    .services{
+        max-height: 200px;
+    }
+
+    .services-menu{
+        padding: 0;
+    }
+
+    .services__item img{
+        max-height: 80%;
+    }
+
+    .menu .title{
+        font-size: 22px;
+        margin: 10px 0;
+    }
 }
