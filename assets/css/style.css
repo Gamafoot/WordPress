@@ -335,16 +335,20 @@ a{
 }
 
 @media screen and (max-width: 1280px) {
+    .menu .menu__navigation{
+        height: 40px;
+    }
+
     .menu__navigation a{
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .block-user-info .main-info h5{
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .main-info p{
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .side h1{
@@ -352,11 +356,11 @@ a{
     }
 
     .character .character__title p{
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .block-statistics .study-process h1{
-        font-size: 25px;
+        font-size: 22px;
     }
 
     .block-statistics .line{
@@ -377,7 +381,11 @@ a{
     }
 
     .menu .title{
-        font-size: 22px;
+        font-size: 20px;
         margin: 10px 0;
+    }
+
+    .materials__menu{
+        padding: 0;
     }
 }
